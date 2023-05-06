@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import UserCard from "../components/UserCard";
 
 export default function UserListLayout() {
   const [userList, setUserList] = useState([]);
@@ -21,10 +22,7 @@ export default function UserListLayout() {
         userList.map((val, key) => {
           return (
             <div key={key}>
-              <h3>
-                {val.name} #{val.id}
-              </h3>
-              <p>{val.email}</p>
+              <UserCard />
             </div>
           );
         })}
