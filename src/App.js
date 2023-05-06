@@ -21,22 +21,46 @@ function App() {
   //     .catch((e) => {});
   // }, []);
 
-// fetch data usin axios
-useEffect(() => {
-  axios.get('https://jsonplaceholder.typicode.com/users').then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.log(error);
-  }).finally(function () {});
-}, []);
+  // fetch data usin axios
+  // useEffect(() => {
+  //   axios
+  //     .get("https://jsonplaceholder.typicode.com/users")
+  //     .then(function (response) {
+  //       console.log(response.data);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     })
+  //     .finally(function () {});
+  // }, []);
 
-useEffect(() => {
-  axios.get('https://jsonplaceholder.typicode.com/posts').then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.log(error);
-  }).finally(function () {});
-}, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://jsonplaceholder.typicode.com/posts")
+  //     .then(function (response) {
+  //       console.log(response.data);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     })
+  //     .finally(function () {});
+  // }, []);
+
+  // axios post method
+  useEffect(() => {
+    axios
+      .post("https://jsonplaceholder.typicode.com/posts", {
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+      })
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <div className="App">
