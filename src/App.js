@@ -4,8 +4,10 @@ import UserListLayout from './layouts/UserListLayout'
 
 export default function App() {
   return (
-    <div>
+    <div className='App'>
+    <div style={{ marginTop: '20px'}}>
     <UserListLayout />
+    </div>
     <TodoLayout />
     </div>
   )

@@ -2,16 +2,16 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-export default function UserCard() {
+export default function UserCard({ name, username, id, website, phone, email, companyInfo }) {
   return (
     <Card>
-      <Card.Header>Featured</Card.Header>
+      <Card.Header>{username} - <b>{id}</b></Card.Header>
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
+        <Card.Title>{name}</Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+          {phone}<br />{email}<br />{companyInfo}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">{website}</Button>
       </Card.Body>
     </Card>
   );
